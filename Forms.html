@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title> USER FORM </title>
+        <style>
+         body
+         {
+            background-image: url(https://www.master-meta4-0.eu/wp-content/uploads/bibliotheque-universite-bichro.webp);
+         }
+        </style>
+    </head>
+    <fieldset>
+        <legend style="color:black; text-align: center; font-size: xx-large;"> <strong> FORMS </strong> </legend>
+    <fieldset style="color: darkorange;">
+        <legend style="color: chartreuse; font-size: larger;" > <span > <strong>USER DETAIS</strong> </span> </legend><br>
+        <strong>  FIRST NAME: <input type="text"> <br> <br>
+        MIDDLE NAME: <input type="text"> <br> <br>
+        LAST NAME: <input type="text"> <br><br>
+        DOB: <input type="date"><br> <br>
+        EMAIL: <input type="alphanumeric" required><br> <br>
+        PHONE NO: <input type="numeric" required> <br> <br> </strong>
+    </fieldset>
+    <fieldset style="color: darkorange;"><br>
+        <legend style="color: chartreuse; font-size: larger;"> <strong> ADDRESS </strong>  </legend>
+         DOOR NO: <input type="alphanumeric"> <br> <br>
+         ADDRESS LINE 1: <input type="text"> &nbsp; &nbsp; &nbsp; ADDRESS LINE 2: <input type="text"> <br><br>
+         CITY/DISTRICT: <input type="text">  &nbsp; &nbsp; &nbsp; STATE: <input type="text"> <br><br>
+         <label for="pincoode"> </label>
+         PINCODE: <input type="numeric" id="pincode" name="pincode" minlength="4" maxlength="4" required>
+    </fieldset>
+    <fieldset style="color:darkorange;">
+        <legend style="color: chartreuse; font-size: larger;"> <strong> PROFESSIONAL DETAILS </strong></legend>
+        EDUCATION QUALIFICAION: <input type="text"> <br> <br>
+        TECHNOLOGIES KNOWN: <input type="text"><br><br>
+        PROJECTS DONE: <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Select a file:</label>
+            <input type="file" id="file" name="file">
+            <br>
+            <input type="submit" value="Upload">
+        </form><br> 
+        INTERSHIPS: <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Select a file:</label>
+            <input type="file" id="file" name="file">
+            <br>
+            <input type="submit" value="Upload">
+        </form>    <br>
+        <label for="job"> JOB EXPERIENCE </label>   
+        <select name="job" id="job">
+            <option value="JOB EXPERIENCE">YES</option>
+            <option value="JOB EXPERIENCE">NO</option>
+        </select> <br> <br>
+    </fieldset><br>
+    <div style=" text-align: center;">
+    <input type="submit" style="font-size: x-large; background-color: green; ">
+</div>
+</fieldset>
+</html>

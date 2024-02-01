@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        th{
+            height: 30px;
+            width:80px;
+        }
+        table{
+            border-collapse:collapse;
+            padding: 5px;
+        }
+        th{
+            background-color: grey;
+        }
+        th{
+            border-color: black;
+        }
+        td{
+            text-align: center;
+        }
+        #lb{
+            width: 35px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        
+
+        }
+        body{
+            background-color:aquamarine;
+        }
+        caption{
+            background-color: burlywood;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <CENTER>
+    <table border="3">
+        <caption> <strong>CSSE(CS)</strong></caption>;
+        <th>DAY<br>/HR</th>
+        <th>10:30 A.M TO  <br>11:20 A.M
+        </th>
+        <th>11:20 A.M TO  <br>12:10 P.M
+        </th>
+        <th>12:10 P.M TO  <br>1:00 P.M
+        </th>
+        <th rowspan="6" id="lb">LUNCH BREAK
+        </th>
+        <th>2:15 P.M TO  <br>3:05 P.M
+        </th>
+        <th>3:05 P.M TO  <br>3:55 P.M
+        </th>
+        <th>3:55 P.M TO  <br>4:45 P.M
+        </th>
+        <tr>
+            <th>MON</th>
+            <td colspan="3">BASH LAB<BR>
+            Room No:511</td>
+            <td>WT</td> <td>ML</td> <td>PBEA</td>
+        </tr>
+        <tr>
+            <th>TUE</th>
+            <td colspan="3">DF LAB<BR>
+                Room No:408-A</td>
+            <td>FoE</td> <td>AWSN</td> <td>WT</td>
+        </tr>
+        <tr>
+            <th>WED</th>
+            <td>FoE</td>
+            <td>ML</td>
+            <td>LIB</td>
+            <td>PBEA</td> <td>MPI</td> <td>DF</td>
+        </tr>
+        <tr>
+            <th>THU</th>
+            <td>WT</td>
+            <td>ML</td>
+            <td>AWSN</td>
+            <td>PBEA</td> <td>DF</td> <td>MPI</td>
+        </tr>
+        <tr>
+            <th>FRI</th>
+            <td colspan="3">WT LAB<BR>
+                Room No:511</td>
+            <td>MPI</td> <td>DF</td> <td>AWSN</td>
+        </tr>
+    </table>
+</CENTER>
+</body>
+</html>
