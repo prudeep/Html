@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Text and Germany Flag</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #movingText {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 20px;
+            color: #333;
+        }
+        #germanyFlag {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="text" direction="left">cyber security</marquee>
+    <div id="movingText">Moving Text</div>
+    
+    <canvas id="germanyFlag" width="300" height="200"></canvas>
+
+    <script>
+        const movingText = document.getElementById('movingText');
+        const germanyFlagCanvas = document.getElementById('germanyFlag');
+        const flagContext = germanyFlagCanvas.getContext('2d');
+
+        let textDirection = 1; // 1 for right, -1 for left
+
+        function moveText() {
+            const screenWidth = window.innerWidth;
+            const textWidth = movingText.offsetWidth;
+
+            if (parseInt(movingText.style.left) >= screenWidth - textWidth) {
+                textDirection = -1;
+            } else if (parseInt(movingText.style.left) <= 0) {
+                textDirection = 1;
+            }
+
+            movingText.style.left = (parseInt(movingText.style.left) + textDirection) + 'px';
+        }
+
+        function resizeCanvas() {
+            germanyFlagCanvas.width = germanyFlagCanvas.width - 10;
+            germanyFlagCanvas.height = germanyFlagCanvas.height - 10;
+            drawGermanyFlag();
+        }
+
+        function drawGermanyFlag() {
+            // Draw Germany Flag
+            const colors = ['#000', '#FFD700', '#000'];
+
+            flagContext.clearRect(0, 0, germanyFlagCanvas.width, germanyFlagCanvas.height);
+
+            const stripeHeight = germanyFlagCanvas.height / colors.length;
+
+            colors.forEach((color, index) => {
+                flagContext.fillStyle = color;
+                flagContext.fillRect(0, index * stripeHeight, germanyFlagCanvas.width, stripeHeight);
+            });
+        }
+
+        setInterval(moveText, 10);
+
+        germanyFlagCanvas.addEventListener('dblclick', () => {
+            resizeCanvas();
+        });
+
+        // Initial draw of the Germany flag
+        drawGermanyFlag();
+    </script>
+</body>
+</html>

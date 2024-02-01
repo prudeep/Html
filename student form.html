@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Forms</title>
+    <style>
+       form {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Three Forms</h1>
+    
+    <!-- Form 1 -->
+    <form id="form1" action="submit.php" method="POST">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div>
+                <input type="text" name ="first_name" placeholder="First Name" required>
+                <input type="text" name="middle_name" placeholder="Middle Name">
+                <input type="text" name="last_name" placeholder="Last Name" required>
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div>
+                <input type="date" name="dob" placeholder="Date of Birth" required>
+                <select name="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <!-- Form 2 -->
+    <form id="form2" action="submit.php" method="POST">
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="state" placeholder="State" required>
+                <input type="text" name="pin_code" placeholder="Pin Code" required>
+            </div>
+            <div>
+                <input type="tel" name="mobile_number" placeholder="Mobile Number" required>
+                <input type="tel" name="alternate_number" placeholder="Alternate Number">
+            </div>
+            <div>
+                <textarea name="address" placeholder="Address" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <!-- Form 3 -->
+    <form id="form3" action="submit.php" method="POST">
+        <fieldset>
+            <legend>Educational Background and Goals</legend>
+            <div>
+                <input type="text" name="school_name" placeholder="School Name" required>
+                <input type="number" name="school_percentage" placeholder="Percentage" required>
+            </div>
+            <div>
+                <input type="text" name="college_name" placeholder="College Name" required>
+                <input type="number" name="college_percentage" placeholder="Percentage" required>
+            </div>
+            <div>
+                <textarea name="goals" placeholder="Dreams or Goals" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

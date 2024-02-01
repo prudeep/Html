@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('path/to/your/image.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your local image */
+      background-repeat: repeat-x;
+      background-size: 100px;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    #menu {
+      padding: 20px;
+    }
+
+    .menuItem {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuItems = document.querySelectorAll('.menuItem');
+
+      menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const itemName = this.textContent;
+          const itemDescription = getItemDescription(itemName);
+          alert(itemDescription);
+        });
+
+        item.addEventListener('dblclick', function() {
+          this.remove();
+        });
+      });
+
+      window.addEventListener('resize', function() {
+        removeAllContent();
+      });
+
+      function removeAllContent() {
+        document.body.innerHTML = '<div style="text-align: center; padding: 50px;">Please reload to view the menu</div>';
+      }
+
+      function getItemDescription(itemName) {
+        // Replace this with actual descriptions for each menu item
+        const descriptions = {
+          'Item 1': 'Description for Item 1',
+          'Item 2': 'Description for Item 2',
+          'Item 3': 'Description for Item 3',
+          // Add more items as needed
+        };
+
+        return descriptions[itemName] || 'No description available.';
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="menu">
+    <div class="menuItem">Item 1</div>
+    <div class="menuItem">Item 2</div>
+    <div class="menuItem">Item 3</div>
+    <!-- Add more menu items as needed -->
+  </div>
+</body>
+</html>
